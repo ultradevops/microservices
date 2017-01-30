@@ -19,7 +19,6 @@ kind: Deployment
 metadata:
   name: cktfrmt
   namespace: microservices
-  version: v1
 spec:
   replicas: 1
   template:
