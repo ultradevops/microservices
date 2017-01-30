@@ -1,0 +1,10 @@
+kubectl apply --filename https://raw.githubusercontent.com/giantswarm/kubernetes-heapster/master/manifests-all.yaml
+### Install dashboard
+#kubectl create -f /root/poc/bin/sampleymls/kubernetes-dashboard.yaml
+## SCALE UP
+kubectl autoscale --namespace=microservices deployment cktfrontend --min=2 --max=10 --cpu-percent=10
+
+### install dashboard
+kubectl create -f https://rawgit.com/kubernetes/dashboard/master/src/deploy/kubernetes-dashboard.yaml
+
+
