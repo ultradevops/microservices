@@ -1,18 +1,3 @@
-kind: Service
-apiVersion: v1
-metadata:
-  name: dockerweb
-  namespace: microservices
-spec:
-  selector:
-    app: dokerweb
-    tier: backend
-  ports:
-    - protocol: "TCP"
-      port: 8181
-      targetPort: 8080
-  type: NodePort
----
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
