@@ -1,7 +1,7 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: cktserverv-1
+  name: dockerweb
   namespace: microservices
 spec:
   selector:
@@ -16,7 +16,7 @@ spec:
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: cktfrontend
+  name: dockerweb
   namespace: microservices
 spec:
   replicas: 1
@@ -26,7 +26,8 @@ spec:
         app: dokerweb
         tier: backend
         track: stable
-        version: v2
+        version : v2
+        
     spec:
       containers:
         - name: docerweb
