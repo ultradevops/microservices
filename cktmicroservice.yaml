@@ -29,5 +29,5 @@ spec:
     spec:
       containers:
         - name: docerweb
-          image: "ultradev/dockerweb:latest"
+          image: "ultradev/dockerwebv2.0"
           lifecycle:
