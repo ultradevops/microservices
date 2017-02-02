@@ -1,29 +1,29 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: cktfrmt
-  namespace: microservices
+  name: cktserver
+  namespace: microservicesdemo
 spec:
   selector:
-    app: cktfrmt
+    app: dokerweb
     tier: backend
-  ports:
-    - protocol: "TCP"
-      port: 8181
-      targetPort: 8080
   type: NodePort
+  ports:
+  - port: 8181
+    targetPort: 8080
+    nodePort: 31417
 ---
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: cktfrmt
-  namespace: microservices
+  name: cktfrontend
+  namespace: microservicesdemo
 spec:
   replicas: 1
   template:
     metadata:
       labels:
-        app: cktfrmt
+        app: dokerweb
         tier: backend
         track: stable
     spec:
