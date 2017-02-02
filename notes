@@ -7,3 +7,5 @@ DOCKER
 https://docs.docker.com/engine/examples/mongodb/
 K8extn
 https://github.com/cvallance/mongo-k8s-sidecar
+flocker:
+https://clusterhq.com/flocker/introduction/
