@@ -6,5 +6,15 @@ kubectl autoscale --namespace=microservices deployment cktfrontend --min=2 --max
 
 ### install dashboard
 kubectl create -f https://rawgit.com/kubernetes/dashboard/master/src/deploy/kubernetes-dashboard.yaml
+create local repo:
+docker run \
+         -e SETTINGS_FLAVOR=local \
+         -e STORAGE_PATH=/tmp/registry \
+         -p 5000:5000 \
+         registry
+tag and push
+docker tag 4aabc5b77e08 localhost:5000/ultradev/dockerweb
+docker push localhost:5000/ultradev/dockerweb 
+
 
 
