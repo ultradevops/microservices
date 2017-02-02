@@ -16,7 +16,7 @@ spec:
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: cktWeb
+  name: cktservice1
   namespace: microservices
 spec:
   replicas: 1
