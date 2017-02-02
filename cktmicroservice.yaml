@@ -1,0 +1,33 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: cktservice
+  namespace: microservices
+spec:
+  selector:
+    app: dockerweb
+    tier: backend
+  type: NodePort
+  ports:
+  - port: 8181
+    targetPort: 8080
+    nodePort: 31417
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: cktapi
+  namespace: microservices
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: dockerweb
+        tier: backend
+        track: stable
+    spec:
+      containers:
+        - name: dockerweb
+          image: "ultradev/dockerwebv2.0"
+          lifecycle:
