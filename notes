@@ -5,3 +5,5 @@ MS
 https://www.mongodb.com/blog/post/running-mongodb-as-a-microservice-with-docker-and-kubernetes
 DOCKER
 https://docs.docker.com/engine/examples/mongodb/
+K8extn
+https://github.com/cvallance/mongo-k8s-sidecar
