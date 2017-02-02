@@ -5,7 +5,7 @@ metadata:
   namespace: microservices
 spec:
   selector:
-    app: dokerweb
+    app: dockerweb
     tier: backend
   type: NodePort
   ports:
@@ -23,11 +23,11 @@ spec:
   template:
     metadata:
       labels:
-        app: dokerweb
+        app: dockerweb
         tier: backend
         track: stable
     spec:
       containers:
-        - name: docerweb
+        - name: dockerweb
           image: "ultradev/dockerwebv2.0"
           lifecycle:
