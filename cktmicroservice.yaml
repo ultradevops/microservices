@@ -1,8 +1,8 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: cktserver
-  namespace: microservicesdemo
+  name: cktservice
+  namespace: microservices
 spec:
   selector:
     app: dokerweb
@@ -16,8 +16,8 @@ spec:
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: cktfrontend
-  namespace: microservicesdemo
+  name: cktWeb
+  namespace: microservices
 spec:
   replicas: 1
   template:
